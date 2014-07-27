@@ -1,0 +1,98 @@
+﻿@charset "UTF-8"
+
+@import "define"
+@import "../bower_components/colors/sass/variables"
+@import "compass"
+
+body
+  background-color: #000
+  color: $white
+
+#top-bar
+  @extend .white-link
+  height: $top-bar-height
+  padding: 15px 0
+  @include background-image(linear-gradient(#161616, #090909 80%, #212121))
+
+  h1
+    margin: 0
+    width: 50%
+    font-size: 12px
+    float: left
+
+    img
+      vertical-align: bottom
+      margin-right: $gap-s
+
+    small
+      font-size: 10px
+      letter-spacing: 0.25em
+
+  .social
+    @extend .ul
+
+    li
+      float: left
+
+      + li
+        margin-left: $gap
+
+    .button
+      width: 26px
+      height: 26px
+      font-size: 14px
+      line-height: 24px
+      text-align: center
+      border: 1px solid #a3a3a3
+      border-radius: 50%
+      vertical-align: middle
+
+      &:hover
+        background-color: $white
+        color: $black
+
+    .vertical-spacer
+      height: 30px
+      border: 1px solid #444
+
+    .phone-number
+      font: 10px/15px Arial
+
+#main-nav
+  @extend .white-link
+  font-size: 14px
+  height: $nav-height
+  @include background-image(linear-gradient(#212121, #474747))
+  border: none
+  border-radius: 0
+
+  .nav li
+    min-width: 90px
+    text-align: center
+
+    a:hover
+      @include background-image(linear-gradient(#1b1b1b, #282828 65%, #353535))
+
+  .active
+    @include background-image(linear-gradient(#1b1b1b, #282828 65%, #353535))
+
+  .me
+    width: 160px
+    background-color: $me-red
+    
+    > li
+      width: 100%
+
+    .open > a
+      background-color: darken($me-red, 10%)
+
+  .dropdown-menu
+
+    li
+      text-align: left
+
+    a
+      color: $black
+
+@import "components/main-slide"
+@import "components/showcase"

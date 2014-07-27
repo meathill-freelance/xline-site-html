@@ -1,0 +1,27 @@
+{
+  "name": "xline-site-html",
+  "version": "1.0.0",
+  "homepage": "http://xline.com.cn",
+  "authors": [
+    "Meathill <meathill@gmail.com>"
+  ],
+  "description": "a pure html template",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "website",
+    "html5",
+    "responsive"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

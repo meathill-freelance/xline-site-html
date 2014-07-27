@@ -1,0 +1,8 @@
+# IDE
+.idea
+
+# repo
+bower_components
+
+# compile
+*.css
