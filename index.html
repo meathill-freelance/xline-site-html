@@ -7,6 +7,12 @@
   <link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.1.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="//cdn.staticfile.org/animate.css/3.1.0/animate.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Favicons -->
+  <link rel="shortcut icon" type="image/png" href="img/ico/favicon.png">
+  <link rel="apple-touch-icon" href="img/ico/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/ico/apple-touch-icon-72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/ico/apple-touch-icon-114.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/ico/apple-touch-icon-144.png">
 </head>
 <body>
 <!-- main top bar -->
@@ -17,8 +23,8 @@
       <small>专业队服定制</small>
     </h1>
     <ul class="pull-right social">
-      <li class="weibo button"><a href="http://weibo.com/meathill" class="fa fa-weibo"></a></li>
-      <li class="qq button"><a href="http://user.qzone.qq.com/11581454" class="fa fa-qq"></a></li>
+      <li class="weibo button"><a href="http://weibo.com/meathill" class="fa fa-weibo" target="_blank"></a></li>
+      <li class="qq button"><a href="http://user.qzone.qq.com/11581454" class="fa fa-qq" target="_blank"></a></li>
       <li class="vertical-spacer"></li>
       <li class="phone button"><a href="javascript:void(0);"><i class="fa fa-phone"></i></a></li>
       <li class="phone-number">
@@ -68,12 +74,13 @@
 <div class="container">
   <div class="carousel slide" data-ride="carousel" id="main-slide">
     <ol class="carousel-indicators">
-
+      <li data-target="#main-slide" data-slide-to="0" class="active"></li>
+      <li data-target="#main-slide" data-slide-to="1"></li>
     </ol>
 
     <div class="carousel-inner">
-      <div class="item active"></div>
-      <div class="item"></div>
+      <div class="item active intro"></div>
+      <div class="item logo"></div>
     </div>
 
     <a class="left carousel-control" href="#main-slide" role="button" data-slide="prev">
@@ -192,24 +199,32 @@
 </div>
 <!-- about us over -->
 <!-- general footer -->
-<footer id="footer">
+<footer id="footer" class="container">
   <div class="slogan">
-    <img src="" ><br>
+    <img src="img/logo2.png" width="110" height="28" align="xline.com" ><br>
     <i class="fa fa-flash"></i> 8天闪电发货
   </div>
-  <ol>
+  <ul class="links">
     <li><a href="/about">关于我们</a></li>
     <li><a href="/privacy">隐私声明</a></li>
     <li><a href="/contact">合作联系</a></li>
     <li><a href="/pay">支付方式</a></li>
     <li><a href="/deliver">配送方式</a></li>
     <li><a href="/faq">常见问题</a></li>
-  </ol>
+  </ul>
   <div class="copyright">
     <p>&copy; Copyright 2014 by XLine 保留一切权利。</p>
   </div>
 </footer>
 <!-- general footer over -->
+<!-- sidebar -->
+<aside id="aside">
+  <p><img src="img/qrcode.jpg" width="130" height="130"></p>
+  <p>关注我们的微信公众账号，随时了解新动态， 获取最优价格优惠。</p>
+  <p><a href="http://weibo.com/meathill" class="fa fa-weibo contact" target="_blank"> 联系我们</a></p>
+  <p><a href="http://user.qzone.qq.com/11581454" class="fa fa-qq contact" target="_blank"> 联系我们</a></p>
+</aside>
+<!-- sidebar over -->
 
 <!-- scripts -->
 <script src="//cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>

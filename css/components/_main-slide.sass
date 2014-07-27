@@ -1,8 +1,19 @@
 @charset "UTF-8"
 
 #main-slide
-  min-height: 430px
+  height: 430px
+
+  .carousel-inner
+    width: 100%
+    height: 100%
 
   .item
     width: 100%
     height: 100%
+
+    &.intro
+      background: url(../img/slide1.jpg) no-repeat center center
+      background-size: contain
+
+    &.logo
+      background: url(../img/slide2.png) no-repeat center center

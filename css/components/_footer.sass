@@ -1,0 +1,33 @@
+@charset "UTF-8"
+
+@import "../define"
+
+#footer
+  margin-top: $gap-l
+  text-align: center
+
+  .slogan
+    background-color: $dark-bg
+    border-bottom: 1px dashed #888
+    padding: 35px 0 5px
+    line-height: 35px
+
+  .links
+    @extend .ul
+    background-color: $dark-bg
+    line-height: 85px
+
+    li
+      display: inline-block
+      padding: 0 30px
+
+      a
+        color: #CCC
+
+  .copyright
+    font-size: 12px
+    line-height: 3em
+    border-bottom: 2em solid $dark-bg
+
+    p
+      margin: 0
