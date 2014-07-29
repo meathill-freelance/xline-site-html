@@ -6,7 +6,13 @@
 
 body
   background-color: #000
-  color: $white
+  color: #CCC
+
+  a
+    color: $white
+
+    &:hover
+      color: $teal
 
 h1,h2,h3
   font-family: "Open Sans", "trebuchet ms", arial, Microsoft Yahei, Simhei
@@ -108,5 +114,7 @@ h1,h2,h3
 @import "components/about-us"
 @import "components/footer"
 @import "components/aside"
+
+@import "pages"
 
 @import "media"
