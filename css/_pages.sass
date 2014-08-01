@@ -4,8 +4,11 @@
 
 .breadcrumb
   @extend .white-link
-  background-color: transparent
   margin: $gap-l
+  border: 1px solid #333
 
   .active
     color: #CCC
+
+  li + li:before
+    color: #999
