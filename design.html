@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.1.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="//cdn.staticfile.org/animate.css/3.1.0/animate.min.css">
   <!-- Theme -->
-  <link rel="stylesheet" href="../css/woocommerce.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- Favicons -->
   <link rel="shortcut icon" type="image/png" href="img/ico/favicon.png">
@@ -79,41 +78,45 @@
   </div>
 </nav>
 <!-- main nav over -->
-<!-- breadcrumbs -->
+<!-- Breadcrumb Start-->
 <div class="container">
   <ol class="breadcrumb">
-    <li><a href="/">Home</a></li>
-    <li class="active">关于我们</li>
+    <li><a href="/">首页</a></li>
+    <li><a href="/teams">XLINE球队</a></li>
+    <li class="active">{{name}} - by {{user_name}}</li>
   </ol>
 </div>
-<!-- breadcrumbs over -->
-<!-- content -->
-<div class="container content">
-  <section>
-    <h1>关于我们</h1>
-    <article>
-      <h2>客服热线</h2>
-      <p><i class="fa fa-phone"></i> 400-0050-021【订购咨询、投诉建议、批评表扬，欢迎拨打，客服妹子热情服务】</p>
-
-      <h2>客服邮箱：</h2>
-      <p><a href="mailto:service@xline.com.cn" class="fa fa-envelope-o"> service@xline.com.cn</a> 【X-LINE客服邮箱，接受各种问题和意见，欢迎来邮】</p>
-
-      <h2>合作邮箱：</h2>
-      <p><a href="mailto:service@xline.com.cn" class="fa fa-envelope-o"> service@xline.com.cn</a> 【接受媒体、品牌合作咨询及建议，欢迎合作】</p>
-
-      <h2>企业客户专线：</h2>
-      <p><i class="fa fa-phone"></i> 400-0050-021 【接受企业、品牌合作咨询，欢迎拨打】</p>
-
-
-      <h2>温馨提示</h2>
-      <p>X-LINE只此一家，绝无分店，也无任何形式的加盟店。</p>
-      <p>官方网站：<a href="www.xline.com.cn">www.xline.com.cn</a> www.xline.com.cn</p>
-      <p>官方微博：<a href="http://weibo.com/x-line">@X-LINE</a> （只在新浪微博）</p>
-      <p>请大家擦亮双眼，不要被山寨版X-LINE欺骗。</p>
-    </article>
-  </section>
+<!-- Breadcrumb End-->
+<!-- Content start-->
+<div class="container content" id="design">
+  <div class="row">
+    <div class="col-md-6 col-sm-12 pics">
+      <img src="img/tmp.jpg" class="img-thumbnail head-pic">
+    </div>
+    <div class="col-md-6 col-sm-12 detail">
+      <h1>{{name}}</h1>
+      <p>{{author}}设计</p>
+      <h3 class="share-title">分享给好友</h3>
+      <div class="share-button-group">
+        <a class="btn btn-default"><i class="fa fa-qq"></i></a>
+        <a class="btn btn-default"><i class="fa fa-weibo"></i></a>
+        <a class="btn btn-default"><i class="fa fa-tencent-weibo"></i></a>
+        <a class="btn btn-default"><i class="fa fa-weixin"></i></a>
+        <a class="btn btn-default"><i class="fa fa-renren"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="more">
+    <h2>其它设计</h2>
+    <ul class="row">
+      <li class="col-md-3 col-sm-6 col-xs-12">
+        <a href="/detail/{{id}}"><img src="img/tmp.jpg" class="img-thumbnail"></a>
+        <h3><a href="/detail/{{id}}">{{name}}</a></h3>
+      </li>
+    </ul>
+  </div>
 </div>
-<!-- content over -->
+<!-- Content End -->
 <!-- general footer -->
 <footer id="footer" class="container">
   <div class="slogan">

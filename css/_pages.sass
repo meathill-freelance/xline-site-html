@@ -4,7 +4,7 @@
 
 .breadcrumb
   @extend .white-link
-  margin: $gap-l
+  margin: $gap-l 0
   border: 1px solid #333
 
   .active
@@ -12,3 +12,41 @@
 
   li + li:before
     color: #999
+
+/**************************************
+ * design
+ *************************************/
+#design
+  .head-pic
+    width: 100%
+
+  .share-title
+    border-top: 1px solid $black
+    font-size: 14px
+    padding-top: $gap-l
+
+  .share-button-group
+    -webkit-filter: grayscale(100%)
+    -moz-filter: grayscale(100%)
+    -ms-filter: grayscale(100%)
+    filter: grayscale(100%)
+    filter: gray
+
+.more
+  border-top: 2px solid #333
+  margin-top: $gap-l * 2
+
+  h2
+    font-size: 20px
+    text-align: center
+
+  ul
+    @extend .ul
+
+    img
+      width: 100%
+      display: block
+
+    h3
+      text-align: center
+      font-size: 16px
