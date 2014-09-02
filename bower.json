@@ -23,5 +23,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "font-awesome": "~4.2.0",
+    "handlebars": "~2.0.0"
+  }
 }

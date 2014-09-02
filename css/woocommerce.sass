@@ -1,3 +1,7 @@
+@charset "UTF-8"
+@import "../bower_components/colors/sass/variables"
+@import "../bower_components/font-awesome/scss/variables"
+
 /* my-account */
 .woocommerce .address
   padding: 10px
@@ -48,3 +52,44 @@
 
         th
           width: 40%
+
+#cart-list
+  h2, h3
+    margin-top: 0
+
+  dl
+    border-top: 2px solid #444
+    border-bottom: 2px solid #444
+    margin: 0
+
+  dt, dd
+    line-height: 2.5em
+
+    &:last-of-type
+      border-top: 1px solid #333
+
+  dd
+    text-align: right
+
+  .count
+    padding-top: 32px
+    font-size: 1.5em
+    line-height: 1.5em
+    text-align: center
+
+    .alert
+      margin-bottom: 0
+
+    strong
+      font-size: 1.5em
+      line-height: 1.2em
+
+  .edit
+    color: $blue
+
+    &:after
+      font-family: 'FontAwesome'
+      content: $fa-var-edit
+
+    &:empty:after
+      content: '[编辑]'
