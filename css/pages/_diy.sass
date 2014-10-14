@@ -1,0 +1,89 @@
+/**************************************
+ * general
+ *************************************/
+.alert-sm 
+  padding: 9px 15px
+
+/**************************************
+ * diy
+ *************************************/
+.diy-container 
+  height: 800px
+  width: 100%
+
+.style-list 
+  padding: 20px 0
+
+  .tab-content
+    margin: 20px 0
+
+  label
+    padding: 10px 10px 0
+    cursor: pointer
+
+    p
+      line-height: 2em
+
+    img
+      border-radius: 4px
+
+    input
+      display: none
+
+    span
+      color: red
+
+    .preview-button
+      position: absolute
+      right: 10px
+      bottom: 0
+      width: 2em
+      height: 2em
+      padding: 0
+      margin: 0
+      line-height: 2em
+      text-align: center
+      cursor: pointer
+
+      &:hover
+        background-color: #666
+        background-color: rgba(0, 0, 0, 0.4)
+        border-radius: 3px
+        color: #FFF
+
+  &.active
+    background-color: #5cb85c
+    border: 1px solid #3e8f3e
+    border-radius: 4px
+
+    div,
+    i
+      color: #FFF
+
+    &:after
+      content: '\f00c'
+      font-family: 'FontAwesome'
+      font-size: 40px
+      line-height: 100%
+      position: absolute
+      right: 10px
+      bottom: 10px
+      color: #3e8f3e
+      text-shadow: 0 0 2px #FFF
+
+  &.disabled
+    cursor: not-allowed
+    opacity: 0.6
+
+    &:after
+      content: '\f05e'
+      font-family: 'FontAwesome'
+      font-size: 100px
+      line-height: 100%
+      position: absolute
+      top: 20px
+      left: 50%
+      margin-left: -43px
+
+    .fa-ban
+      display: block
