@@ -1,3 +1,6 @@
+@charset "UTF-8"
+@import "../../bower_components/colors/sass/variables"
+
 /**************************************
  * general
  *************************************/
@@ -17,12 +20,16 @@
   .tab-content
     margin: 20px 0
 
+  p.lead
+    margin-bottom: 0
+
   label
     padding: 10px 10px 0
     cursor: pointer
 
     p
       line-height: 2em
+      margin-bottom: 0
 
     img
       border-radius: 4px
@@ -30,8 +37,9 @@
     input
       display: none
 
-    span
-      color: red
+    .sale
+      color: $red
+      text-indent: 1em
 
     .preview-button
       position: absolute
@@ -87,3 +95,9 @@
 
       .fa-ban
         display: block
+
+      .exclusive
+        line-height: 120px
+        width: 100%
+        display: block
+        text-align: center
