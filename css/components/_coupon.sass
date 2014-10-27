@@ -1,0 +1,37 @@
+@charset "UTF-8"
+
+@import "compass"
+
+.coupon
+  background: #ececec
+  color: #21759A
+  text-shadow: 0 1px 0 #ddd
+  padding: 5px 10px
+  position: relative
+  line-height: 1em
+  font-weight: 700
+  width: 5em
+  margin: 0 auto
+  font-size: 3em
+  text-align: center
+
+  span
+    border: 2px dashed #CCC
+    padding: 8px
+    @include border-radius(2px)
+    display: block
+
+  &:before,
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 4px
+    border-left: 4px dashed #000
+    font: 0/0 Arial
+    height: 100%
+
+  &:after
+    left: auto
+    right: 0
