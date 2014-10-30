@@ -2,6 +2,7 @@
 
 h1, h2, h3
   font-family: Arial, "Microsoft Yahei", Simhei
+
 h2, h3
   margin: 0
 
@@ -13,6 +14,10 @@ header.container
   right: 15px
   bottom: 10px
 
+object
+  visibility: hidden
+
 @media print
+  object,
   .hidden-print
     display: none
