@@ -1,5 +1,6 @@
 @charset "UTF-8"
 @import "../../bower_components/colors/sass/variables"
+@import "../../bower_components/font-awesome/scss/variables"
 
 /**************************************
  * general
@@ -16,6 +17,10 @@
 
 .style-list 
   padding: 20px 0
+
+  .btn-info.active:before
+    content: $fa-var-check
+    margin-right: 0.5em
 
   .tab-content
     margin: 20px 0
