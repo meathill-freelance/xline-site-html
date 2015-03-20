@@ -1,5 +1,6 @@
 @charset "UTF-8"
 
+@import "compass/css3/filter"
 @import "define"
 
 .breadcrumb
@@ -24,11 +25,7 @@
     font-size: 14px
 
   .share-button-group
-    -webkit-filter: grayscale(100%)
-    -moz-filter: grayscale(100%)
-    -ms-filter: grayscale(100%)
-    filter: grayscale(100%)
-    filter: gray
+    @include filter(grayscale(100%))
 
 .more
   border-top: 2px solid #333
@@ -57,5 +54,3 @@
 
 #teams
   padding-top: $gap-l
-
-@import "pages/diy"

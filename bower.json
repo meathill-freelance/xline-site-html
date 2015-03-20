@@ -1,7 +1,7 @@
 {
   "name": "xline-site-html",
   "version": "1.0.0",
-  "homepage": "http://xline.com.cn",
+  "homepage": "http://www.xline.com.cn",
   "authors": [
     "Meathill <meathill@gmail.com>"
   ],
@@ -25,9 +25,13 @@
     "tests"
   ],
   "dependencies": {
-    "font-awesome": "~4.2.0",
+    "bootstrap": "3.3.4",
+    "font-awesome": "~4.3.0",
     "handlebars": "~2.0.0",
-    "colors": "~2.0.0",
+    "colors": "~2.2.0",
     "backbone": "~1.1.2"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "twbs/bootstrap-sass#~3.3.4"
   }
 }
