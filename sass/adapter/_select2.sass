@@ -1,0 +1,26 @@
+@import "../../bower_components/colors/sass/variables"
+@import "../define"
+@import "compass/css3/box-shadow"
+
+.woocommerce form .form-row .select2-container
+  line-height: 36px
+
+.select2-container .select2-choice,
+.select2-drop
+  background-color: $input-bg
+  border-color: $input-border
+  color: $white
+
+.select2-dropdown-open .select2-choice
+  @include box-shadow(none)
+
+.select2-search input
+  background-color: #333
+  border-color: #444
+
+.select2-results
+  background: transparent
+  color: $white
+
+  .select2-highlighted
+    background: #333

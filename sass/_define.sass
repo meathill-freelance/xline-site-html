@@ -1,9 +1,5 @@
 @charset "UTF-8"
 
-@import "../bower_components/colors/sass/_variables"
-@import "../../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/_compass"
-@import "../../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/css3/_transform"
-
 $gap-s: 5px
 $gap: 10px
 $gap-l: 20px
@@ -17,35 +13,7 @@ $dark-bg: #1C1C1C
 $success-text: #77b300
 $link-text: #2a9fd6
 
-.ul
-  margin: 0
-  padding: 0
+$input-bg: #222
+$input-border: #282828
 
-  li
-    list-style: none
 
-.white-link
-
-  a
-    color: $white
-
-    &:hover
-      color: $white
-      text-decoration: none
-
-.slideUp
-  overflow: hidden
-
-  .detail
-    @include translateY(100%)
-    @include transition-property(all)
-    @include transition-duration(0.6s)
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    z-index: 5
-
-  &:hover .detail
-    @include translateY(0)
