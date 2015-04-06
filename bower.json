@@ -32,6 +32,7 @@
     "backbone": "~1.1.2"
   },
   "devDependencies": {
-    "bootstrap-sass": "twbs/bootstrap-sass#~3.3.4"
+    "bootstrap-sass": "twbs/bootstrap-sass#~3.3.4",
+    "qunit": "~1.18.0"
   }
 }
