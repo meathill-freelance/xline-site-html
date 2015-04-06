@@ -4,11 +4,15 @@
 'use strict';
 (function (ns) {
   var spinner = '<i class="fa fa-spin fa-spinner"></i>'
+    , ERROR_HTTP = 1
+    , ERROR_STATUS = 2
+    , ERROR_MSG =3
     , SmartForm = Backbone.View.extend({
       events: {
         'submit': 'submitHandler',
         'error form': 'form_errorHandler',
-        'success form': 'form_successHandler'
+        'success form': 'form_successHandler',
+        'hide.bs.modal': 'modal_hideHandler'
       },
       getParam: function (array) {
         var param = {};
@@ -27,20 +31,31 @@
           .addClass('alert-' + classes)
           .html(icon + msg)
           .slideDown();
-      },
-      form_errorHandler: function (event, error) {
-        var form = $(event.target);
-        switch (event.namespace) {
-          case 'http':
-            this.showResult(form, false, error.code);
-            break;
+        form.find('input, select, textarea').not(form.data('exclusive')).prop('disabled', false);
 
-          case 'status':
+        if (isSuccess) {
+          var modal = form.closest('.modal');
+          if (modal.length) {
+            var timeout = setTimeout(function () {
+              modal.modal('hide');
+            }, 3000);
+            modal.data('timeout', timeout);
+          }
+        }
+      },
+      form_errorHandler: function (event, type, error) {
+        var form = $(event.target);
+        switch (type) {
+          case ERROR_HTTP:
             this.showResult(form, false, error);
             break;
 
-          case 'msg':
-            this.showResult(form, false, error.meg);
+          case ERROR_STATUS:
+            this.showResult(form, false, error);
+            break;
+
+          case ERROR_MSG:
+            this.showResult(form, false, error.msg + ('error' in error ? '<br>' + error.error : ''));
             break;
         }
       },
@@ -48,14 +63,18 @@
         var form = $(event.target);
         this.showResult(form, true, response.msg);
       },
+      modal_hideHandler: function (event) {
+        var timeout = $(event.target).data('timeout');
+        clearTimeout(timeout);
+      },
       errorHandler: function (xhr, status, error) {
+        if ('responseJSON' in xhr) {
+          return this.trigger('error', [ERROR_MSG, xhr.responseJSON]);
+        }
         if (error) {
-          return this.trigger('error.http', error);
+          return this.trigger('error', [ERROR_HTTP, error]);
         }
-        if (status) {
-          return this.trigger('error.status', status);
-        }
-        this.trigger('error.msg', 'responseJSON' in xhr ? xhr.responseJSON : xhr.responseText);
+        this.trigger('error', [ERROR_STATUS, status]);
       },
       submitHandler: function (event) {
         var form = $(event.target)
@@ -80,6 +99,9 @@
           submit.prop('disabled', true)
             .find('i').hide()
             .end().prepend(spinner);
+          form
+            .data('exclusive', form.find(':disabled'))
+            .find('input, select, textarea').prop('disabled', true);
           $.ajax(form.attr('action'), {
             context: form,
             data: data,
@@ -95,7 +117,7 @@
         if (response.code === 0) {
           this.trigger('success', response);
         } else {
-          this.trigger('error.msg', response);
+          this.trigger('error', [ERROR_MSG, response]);
         }
       }
     });

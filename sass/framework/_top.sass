@@ -80,16 +80,6 @@
   .active
     @include background-image(linear-gradient(#1b1b1b, #282828 65%, #353535))
 
-  .me
-    width: 160px
-    background-color: $me-red
-
-    > li
-      width: 100%
-
-    .open > a
-      background-color: darken($me-red, 10%)
-
   .dropdown-menu
 
     li
@@ -97,3 +87,13 @@
 
     .fa
       margin-right: $gap-s
+
+#me
+  width: 160px
+  background-color: $me-red
+
+  > li
+    width: 100%
+
+  .open > a
+    background-color: darken($me-red, 10%)

@@ -195,4 +195,4 @@
       alert('移除失败');
     }
   });
-}(xline.view));
+}(xline.component));

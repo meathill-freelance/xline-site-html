@@ -20,4 +20,4 @@
       }
     }
   }
-}(xline.view));
+}(xline.component));
