@@ -1,0 +1,32 @@
+{
+  "name": "xline-html",
+  "version": "0.1.0",
+  "description": "pure html template for xline.com.cn",
+  "main": "index.html",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:meathill-freelance/xline-site-html.git"
+  },
+  "keywords": [
+    "wordpress",
+    "woocommerce"
+  ],
+  "author": "Meathill <meathill@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meathill-freelance/xline-site-html/issues"
+  },
+  "homepage": "https://github.com/meathill-freelance/xline-site-html",
+  "devDependencies": {
+    "body-parser": "^1.12.2",
+    "express": "^4.12.3",
+    "grunt": "^0.4.5",
+    "grunt-contrib-qunit": "^0.7.0"
+  }
+}

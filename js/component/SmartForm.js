@@ -18,13 +18,14 @@
         return param;
       },
       showResult: function (form, isSuccess, msg) {
-        var classes = isSuccess ? 'success fa-smile-o' : 'danger fa-frown-o';
+        var classes = isSuccess ? 'success' : 'danger'
+          , icon = '<i class="fa fa-' + (isSuccess ? 'smile-o' : 'frown-o') + '"></i> ';
         form.data('submit').prop('disabled', false)
-          .find('.spin').remove()
+          .find('.fa-spin').remove()
           .end().find('i').show();
-        form.find('.alert')
-          .addClass('fa ' + classes)
-          .text(msg)
+        form.find('.alert-msg')
+          .addClass('alert-' + classes)
+          .html(icon + msg)
           .slideDown();
       },
       form_errorHandler: function (event, error) {
@@ -45,7 +46,7 @@
       },
       form_successHandler: function (event, response) {
         var form = $(event.target);
-        this.showResult(form, true, response);
+        this.showResult(form, true, response.msg);
       },
       errorHandler: function (xhr, status, error) {
         if (error) {
@@ -78,12 +79,12 @@
           _.extend(data, options.data);
           submit.prop('disabled', true)
             .find('i').hide()
-            .end().append(spinner);
+            .end().prepend(spinner);
           $.ajax(form.attr('action'), {
             context: form,
             data: data,
             dataType: 'json',
-            type: 'POST',
+            type: form.attr('method') || 'POST',
             success: this.successHandler,
             error: this.errorHandler
           });

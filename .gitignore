@@ -3,8 +3,9 @@
 
 # repo
 bower_components
+node_modules
 
 # compile
 *.map
 *.css
-.sass-cache
+**/.sass-cache

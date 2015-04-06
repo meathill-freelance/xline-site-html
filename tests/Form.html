@@ -4,11 +4,33 @@
   <meta charset="UTF-8">
   <title>测试form</title>
   <link rel="stylesheet" href="../bower_components/qunit/qunit/qunit.css">
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 <div id="qunit"></div>
 <div id="qunit-fixture"></div>
+<div class="container">
+  <div class="well">
+    <form action="http://localhost:3000/" class="ajax">
+      <div class="alert alert-msg" style="display: none"></div>
+      <input type="hidden" name="id" value="1984">
+      <div class="form-group">
+        <label for="test-field">测试</label>
+        <input type="email" value="meathill@gmail.com" class="form-control" id="test-field">
+      </div>
+      <button class="btn btn-primary"><i class="fa fa-check"></i> 提交</button>
+    </form>
+  </div>
+</div>
+
+
 <script src="../bower_components/qunit/qunit/qunit.js"></script>
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/underscore/underscore-min.js"></script>
+<script src="../bower_components/backbone/backbone.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/component/SmartForm.js"></script>
 <script src="form.js"></script>
 </body>
 </html>
