@@ -45,7 +45,7 @@
     },
     initialize: function () {
       this.template = Handlebars.compile($('#cart-row').html());
-      this.modal = new ns.EditModal({
+      this.modal = new xline.popup.EditModal({
         el: '#edit-modal'
       });
       this.modal.on('save', this.modal_saveHandler, this);

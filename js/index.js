@@ -3,10 +3,12 @@
  */
 $(function () {
   // init
+  xline.component.Manager.init();
 });
 
 // 初始化命名空间
 var xline = {
   component: {},
+  popup: {},
   view: {}
 };
