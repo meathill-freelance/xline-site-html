@@ -97,7 +97,9 @@
       }
     },
     model_destroySuccessHandler: function (model, response) {
-      updateTotal(response);
+      if (response) {
+        updateTotal(response);
+      }
       this.$('#' + (model.has('id') ? model.id : model.cid)).fadeOut(function () {
         $(this).remove();
       });
@@ -114,14 +116,10 @@
     },
     model_saveSuccessHandler: function (model, response) {
       var tr = this.$('#' + (model.has('id') ? model.id : model.cid))
-        , button = tr.find('.save-button.processing');
-      button
-        .removeClass('processing')
-        .prop('disabled', false)
-        .find('i').removeClass('fa-spin fa-spinner')
-        .addClass('fa-check')
-        .end().siblings()
-          .prop('disabled', false);
+        , button = tr.find('.save-button.processing')
+        , others = button.siblings();
+      button.remove();
+      others.prop('disabled', false);
       tr.find('.msg').remove();
       tr.children().last().append('<span class="msg text-success">保存成功</span>');
 
@@ -187,7 +185,7 @@
       }
     },
     removeDesign_successHandler: function (response) {
-      this.$('#' + response.design).fadeOut(function () {
+      this.$('#desgin-' + response.design).fadeOut(function () {
         $(this).remove();
       });
     },
