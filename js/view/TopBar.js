@@ -1,5 +1,5 @@
 /**
- * Created by Â·¼Ñ on 2015/4/7.
+ * Created by meathill on 2015/4/7.
  */
 'use strict';
 (function (ns) {

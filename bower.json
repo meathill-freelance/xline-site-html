@@ -25,14 +25,14 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "3.3.4",
-    "font-awesome": "~4.3.0",
-    "handlebars": "~3.0.0",
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0",
+    "handlebars": "~4.0.3",
     "colors": "~2.2.0",
-    "backbone": "~1.1.2"
+    "backbone": "~1.2.3"
   },
   "devDependencies": {
     "bootstrap-sass": "twbs/bootstrap-sass#~3.3.4",
-    "qunit": "~1.18.0"
+    "qunit": "~1.19.0"
   }
 }

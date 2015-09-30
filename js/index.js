@@ -1,12 +1,12 @@
 /**
- * Created by 路佳 on 2015/4/6.
+ * Created by meathill on 2015/4/6.
  */
 $(function () {
   // init
   xline.component.Manager.init();
 });
 
-// 初始化命名空间
+// namespace
 var xline = {
   component: {},
   popup: {},
